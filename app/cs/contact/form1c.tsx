@@ -13,23 +13,28 @@ export default function ContactPage() {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(formData);
-    // Form submission logic here
+    // You can replace this with your API call or form submission logic
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-white">
-      <div className="flex flex-col md:flex-row justify-center items-center p-8 gap-12 max-w-6xl mx-auto">
+    <div className="min-h-screen flex justify-center items-center bg-white px-4 py-10">
+      <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-12 max-w-6xl w-full">
 
         {/* Form Section */}
-        <form onSubmit={handleSubmit} className="flex-1 space-y-4 w-full max-w-md">
-          <div className="flex gap-4">
+        <form
+          onSubmit={handleSubmit}
+          className="flex-1 space-y-4 w-full max-w-md"
+        >
+          <div className="flex flex-col sm:flex-row gap-4">
             <input
               type="text"
               name="firstName"
@@ -81,7 +86,7 @@ export default function ContactPage() {
         </form>
 
         {/* Contact Info Section */}
-        <div className="flex-1 flex flex-col gap-10 text-[#012c32] w-full max-w-md">
+        <div className="flex-1 flex flex-col gap-8 text-[#012c32] w-full max-w-md">
           {/* Phone */}
           <div className="flex items-start gap-4">
             <div className="bg-[#012c32] p-3 rounded-full">
@@ -112,13 +117,13 @@ export default function ContactPage() {
             </div>
             <div>
               <p className="font-bold text-lg">
-                Liyonta Tea Factory, <br /> Dangala, Alapaladeniya
+                Liyonta Tea Factory, <br />
+                Dangala, Alapaladeniya
               </p>
               <p className="text-sm mt-1 text-gray-600">Our Address</p>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

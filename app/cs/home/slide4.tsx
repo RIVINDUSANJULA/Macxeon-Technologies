@@ -30,16 +30,17 @@ export default function Slide4() {
   return (
     <div ref={divRef} className="">
       <div
-        className={`s4 self-center pb-[10px] 
+        className={`s4 self-center pb-[10px] text-center 
         ${isVisible ? "s4up" : "s4down"}`}
       >
-        <h2 className="text-white box-border font-normal text-center align-middle self-center mx-auto my-2 pt-40 text-6xl">
+        <h2 className="text-white box-border font-normal text-center align-middle self-center mx-auto my-2 pt-40 text-3xl md:text-5xl lg:text-6xl">
           Handpicked with Care, <br /> Crafted with Passion.
         </h2>
-        <p className="p1 pt-2 pb-20">
-          From Sri Lanka&apos;s highlands to your cup, every leaf reflects tradition, <br />
-          dedication, and the art of fine tea-making
+        <p className="p1 pt-2 pb-20 text-[20px] md:text-1xl lg:text-2xl ml-[50px] mr-[50px] md:ml-[85px] md:mr-[85px]">
+          Grown in the heart of Sri Lanka’s lush hills, our tea tells a story of heritage,
+          handpicked excellence, and the timeless craft of tea-making.
         </p>
+
       </div>
     </div>
   );

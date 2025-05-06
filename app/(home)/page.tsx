@@ -1,70 +1,81 @@
 import Image from 'next/image';
-import S1 from '../cs/home/slide1'
-import S2 from '../cs/home/slide2'
-import S3 from '../cs/home/slide3'
-import S4 from '../cs/home/slide4'
-import Form1 from '../cs/home/form1'
+import S1 from '../cs/home/slide1';
+import S2 from '../cs/home/slide2';
+import S3 from '../cs/home/slide3';
+import S4 from '../cs/home/slide4';
+import Form1 from '../cs/home/form1';
 
-
-import cet1 from '@/public/CEYLONTEA.png'
-import cet2 from '@/public/ISO-2.png'
-import cet3 from '@/public/OZONE.png'
-import cet4 from '@/public/SGS.png'
-import cet5 from '@/public/SLS.png'
+import cet1 from '@/public/CEYLONTEA.png';
+import cet2 from '@/public/ISO-2.png';
+import cet3 from '@/public/OZONE.png';
+import cet4 from '@/public/SGS.png';
+import cet5 from '@/public/SLS.png';
 
 export default function Page() {
   return (
-    <div className="bg-white">
-      <S1/>
-      <S2/>
-      <S3/>
-      <div className="flex flex-col items-center justify-center text-center mt-5">
-        <h2 className="text-[#013D45] font-[400] text-[56px] leading-[56px] font-['Trebuchet_MS','Lucida_Sans_Unicode','Lucida_Grande','Lucida_Sans','Arial','sans-serif']">Our Collection.</h2>
-        <p className="text-[#909090] font-light text-[20px] leading-[32px] font-[Arial,Helvetica,sans-serif] w-[610px] mt-10">Each tea purchase comes with organically and ethically grown loose LIYONTA tea, carefully <br /> blended to create the perfect cup.</p>
-        {/* {<S3/>} */}
+    <div className="bg-white overflow-x-hidden max-w-full">
+      <S1 />
+      <S2 />
+      <S3 />
+
+      {/* Our Collection */}
+      <div className="flex flex-col items-center justify-center text-center mt-8 px-4">
+        <h2 className="text-[#013D45] text-[32px] md:text-[40px] lg:text-[56px] font-normal leading-tight font-['Trebuchet_MS','Lucida_Sans_Unicode','Lucida_Grande','Lucida_Sans','Arial','sans-serif']">
+          Our Collection.
+        </h2>
+        <p className="text-[#909090] font-light text-[16px] md:text-[18px] lg:text-[20px] leading-[28px] md:leading-[30px] lg:leading-[32px] mt-6 max-w-[90%] md:max-w-[80%] lg:max-w-[610px] font-[Arial,Helvetica,sans-serif]">
+          Each tea purchase comes with organically and ethically grown loose LIYONTA tea,
+          carefully blended to create the perfect cup.
+        </p>
       </div>
-      <div className=""><S4/></div>
-      <div className='self-center mt-12 mb-15'>
-        <h2 className="text-[#013D45] font-normal text-[56px] leading-[56px] h-[56px] font-['Trebuchet_MS','Lucida_Sans_Unicode','Lucida_Grande','Lucida_Sans','Arial',sans-serif] text-center align-middle self-center">Featured Products.</h2>
-        <p className="text-[#909090] font-light text-[20px] leading-[32px] my-[20px] h-[64px] font-[Arial,Helvetica,sans-serif] text-center align-middle self-center">Each tea purchase comes with organically and ethically grown loose LIYONTA <br/> tea, carefully blended to create the perfect cup.</p>
-      </div>
+
       <div>
-        <h2 className="text-[#013D45] font-normal text-[56px] leading-[56px] h-[56px] font-['Trebuchet_MS','Lucida_Sans_Unicode','Lucida_Grande','Lucida_Sans','Arial',sans-serif] text-center align-middle self-center">Our Standards.</h2>
-        <p className="text-[#909090] font-light text-[20px] leading-[32px] my-[20px] h-[64px] font-[Arial,Helvetica,sans-serif] text-center align-middle self-center pb-30">We are committed to delivering excellence in every product, with trusted <br/> certifications that ensure quality and reliability.</p>
+        <S4 />
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-15 mx-[120px] mb-35'>
-          <Image
-            src={cet1}
-            alt="Ceylon Tea"
-            className="p-[20px]"
-          />
-          <Image
-            src={cet2}
-            alt="ISO"
-            className="p-[20px]"
-          />
-          <Image
-            src={cet3}
-            alt="Ozone Friendly Pure Ceylone Tea"
-            className="p-[20px]"
-          />
-          <Image
-            src={cet4}
-            alt="SGS"
-            className="p-[20px]"
-          />
-          <Image
-            src={cet5}
-            alt="SLS"
-            className="p-[20px]"
-          />
+
+      {/* Featured Products */}
+      <div className="text-center mt-12 px-4">
+        <h2 className="text-[#013D45] text-[32px] md:text-[40px] lg:text-[56px] font-normal leading-tight font-['Trebuchet_MS','Lucida_Sans_Unicode','Lucida_Grande','Lucida_Sans','Arial','sans-serif']">
+          Featured Products.
+        </h2>
+        <p className="text-[#909090] font-light text-[16px] md:text-[18px] lg:text-[20px] leading-[28px] md:leading-[30px] lg:leading-[32px] mt-4 max-w-[90%] md:max-w-[80%] lg:max-w-[610px] mx-auto font-[Arial,Helvetica,sans-serif]">
+          Each tea purchase comes with organically and ethically grown loose LIYONTA
+          tea, carefully blended to create the perfect cup.
+        </p>
       </div>
-      <div className="w-full bg-[url('/liyonta_tea_homepage_contact_us.webp')] bg-no-repeat bg-cover  text-center align-middle self-center">
-          <h2 className="text-white box-border font-normal leading-normal text-center align-middle self-center pt-10 text-7xl">Reach Us.</h2>
-          <p className="text-white font-light text-[20px] leading-[32px] my-[20px] font-[Arial,Helvetica,sans-serif] text-center align-middle self-center">We&apos;re just a message away. Share your thoughts, inquiries, or feedback; we&apos;d love to <br/> connect with you.</p>
-          <Form1/>
+
+      {/* Our Standards */}
+      <div className="text-center mt-16 px-4">
+        <h2 className="text-[#013D45] text-[32px] md:text-[40px] lg:text-[56px] font-normal leading-tight font-['Trebuchet_MS','Lucida_Sans_Unicode','Lucida_Grande','Lucida_Sans','Arial','sans-serif']">
+          Our Standards.
+        </h2>
+        <p className="text-[#909090] font-light text-[16px] md:text-[18px] lg:text-[20px] leading-[28px] md:leading-[30px] lg:leading-[32px] mt-4 max-w-[90%] md:max-w-[80%] lg:max-w-[610px] mx-auto font-[Arial,Helvetica,sans-serif]">
+          We are committed to delivering excellence in every product, with trusted
+          certifications that ensure quality and reliability.
+        </p>
+      </div>
+
+      {/* Certification Logos - Inline and Responsive */}
+      <div className="flex flex-wrap justify-center items-center gap-6 mt-10 px-6 md:px-16 lg:px-[120px] mb-16">
+        <Image src={cet1} alt="Ceylon Tea" className="w-20 md:w-24 lg:w-28 object-contain" />
+        <Image src={cet2} alt="ISO" className="w-20 md:w-24 lg:w-28 object-contain" />
+        <Image src={cet3} alt="Ozone Friendly Pure Ceylon Tea" className="w-20 md:w-24 lg:w-28 object-contain" />
+        <Image src={cet4} alt="SGS" className="w-20 md:w-24 lg:w-28 object-contain" />
+        <Image src={cet5} alt="SLS" className="w-20 md:w-24 lg:w-28 object-contain" />
+      </div>
+
+      {/* Reach Us Section */}
+      <div className="w-full bg-[url('/liyonta_tea_homepage_contact_us.webp')] bg-no-repeat bg-cover text-center py-12 px-4">
+        <h2 className="text-white text-[32px] md:text-[48px] lg:text-[64px] font-normal leading-snug">
+          Reach Us.
+        </h2>
+        <p className="text-white font-light text-[16px] md:text-[18px] lg:text-[20px] leading-[28px] md:leading-[30px] lg:leading-[32px] mt-4 max-w-[90%] md:max-w-[700px] mx-auto font-[Arial,Helvetica,sans-serif]">
+          We&apos;re just a message away. Share your thoughts, inquiries, or feedback; we&apos;d love to connect with you.
+        </p>
+        <div className="mt-8">
+          <Form1 />
+        </div>
       </div>
     </div>
-      
   );
 }

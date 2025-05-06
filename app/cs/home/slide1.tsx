@@ -30,21 +30,21 @@ export default function Slide1() {
 
   return (
     <div className="">
-      <div className={`s1 self-center pb-[10px] 
+      <div className={`s1 self-center 
         ${scrollUps ? "sup" : ""} 
         ${scrollDowns ? "sdown" : ""}`}>
         
-        <h2 className="text-white box-border font-normal leading-normal text-center align-middle w-[511px] h-[91.75px] self-center mx-auto my-2 pt-40 text-7xl">
+        <h2 className="text-white box-border font-normal leading-normal text-center align-middle  self-center mx-auto my-2 pt-40 sm:pt-50 md:pt-60 lg:pt-70 text-4xl sm:text-5xl md:text-6xl lg:text-7xl ">
           Want To Taste Our Tea?
         </h2>
         
-        <p className="text-white box-border font-sans text-[20px] font-light leading-[32px] my-[20px] mx-0 text-center [text-size-adjust:100%] [unicode-bidi:isolate] pt-45">
+        <p className="text-white box-border font-sans text-[20px] font-light leading-[32px] my-[20px] mx-0 text-center [text-size-adjust:100%] [unicode-bidi:isolate]">
           Each tea purchase comes with organically and ethically grown loose <br /> 
           LIYONTA tea, carefully blended to create the perfect cup.
         </p>
 
         {/* Center the button */}
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center mt-2 sm:mt-3 md:mt4 lg:mt-6">
           <button className="flex items-center gap-2 px-6 py-3 bg-white rounded-full text-black font-sans text-[18px] font-medium shadow-md hover:shadow-lg transition">
             Shop Now
             <span className="text-xl">→</span>

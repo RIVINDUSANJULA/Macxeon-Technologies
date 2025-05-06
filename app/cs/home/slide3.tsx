@@ -38,8 +38,8 @@ export default function Slide2() {
             key={index}
             className="w-full flex-shrink-0 flex flex-col justify-center items-center"
           >
-            <h1 className="text-9xl text-white">{slide.number}</h1>
-            <p className="text-4xl mt-4 text-white">{slide.text}</p>
+            <h1 className="text-7xl md:text-8xl lg:text-9xl text-white">{slide.number}</h1>
+            <p className="text-2xl md:text-4xl lg:text-5xl mt-4 text-white">{slide.text}</p>
           </div>
         ))}
       </div>
