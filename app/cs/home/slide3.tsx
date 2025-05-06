@@ -1,64 +1,47 @@
-"use client";
-import { useEffect, useState } from "react";
-import './design.css'
+"use client"
+import { useEffect, useRef, useState } from "react";
+import './design.css';
 
-export default function Slide2() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides: { number: string; text: string }[] = [
-    { number: "19", text: "Years of Service" },
-    { number: "60+", text: "Products Exported" },
-    { number: "10K+", text: "Products Exported" },
-  ];
-
-  const totalSlides = slides.length;
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
+export default function Slide4() {
+  const [isVisible, setIsVisible] = useState(false);
+  const divRef = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
-    return () => clearInterval(interval);
-  }, [currentSlide]);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.6, // Adjust as needed (0.3 means 30% of the div is visible)
+      }
+    );
+
+    if (divRef.current) {
+      observer.observe(divRef.current);
+    }
+
+    return () => {
+      if (divRef.current) {
+        observer.unobserve(divRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <div className="s3 relative w-full h-screen overflow-hidden bg-white-100 flex items-center justify-center">
-      {/* Slides Wrapper */}
+    <div ref={divRef} className="">
       <div
-        className={`flex transition-transform duration-700 ease-in-out w-full h-full`}
-        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        className={`s4 self-center pb-[10px] text-center 
+        ${isVisible ? "s4up" : "s4down"}`}
       >
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className="w-full flex-shrink-0 flex flex-col justify-center items-center"
-          >
-            <h1 className="text-7xl md:text-8xl lg:text-9xl text-white">{slide.number}</h1>
-            <p className="text-2xl md:text-4xl lg:text-5xl mt-4 text-white">{slide.text}</p>
-          </div>
-        ))}
-      </div>
+        <h2 className="text-white box-border font-normal text-center align-middle self-center mx-auto my-2 pt-40 text-3xl md:text-5xl lg:text-6xl">
+          Handpicked with Care, <br /> Crafted with Passion.
+        </h2>
+        <p className="p1 pt-2 pb-20 text-[20px] md:text-1xl lg:text-2xl ml-[50px] mr-[50px] md:ml-[85px] md:mr-[85px]">
+          Grown in the heart of Sri Lanka’s lush hills, our tea tells a story of heritage,
+          handpicked excellence, and the timeless craft of tea-making.
+        </p>
 
-      {/* Navigation Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-8 top-1/2 transform -translate-y-1/2 text-4xl text-white hover:text-white z-10"
-        aria-label="Previous Slide"
-      >
-        &#8592;
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-8 top-1/2 transform -translate-y-1/2 text-4xl text-white hover:text-white z-10"
-        aria-label="Next Slide"
-      >
-        &#8594;
-      </button>
+      </div>
     </div>
   );
 }

@@ -37,7 +37,7 @@ export default function Slide4() {
           Handpicked with Care, <br /> Crafted with Passion.
         </h2>
         <p className="p1 pt-2 pb-20 text-[20px] md:text-1xl lg:text-2xl ml-[50px] mr-[50px] md:ml-[85px] md:mr-[85px]">
-          Grown in the heart of Sri Lanka’s lush hills, our tea tells a story of heritage,
+          Grown in the heart of Sri Lanka&apos;s lush hills, our tea tells a story of heritage,
           handpicked excellence, and the timeless craft of tea-making.
         </p>
 
