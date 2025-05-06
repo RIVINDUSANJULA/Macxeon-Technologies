@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 
 import cet1 from '@/public/CEYLONTEA.png'
